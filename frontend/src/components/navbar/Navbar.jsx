@@ -1,3 +1,4 @@
+import './navbar.css';
 import { NavLink, useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { useContext, useState } from "react";
