@@ -3,7 +3,7 @@ import axiosInstance from "../../axios/axios";
 import toast from "react-hot-toast";
 import { MdPlace } from "react-icons/md";
 import { IoMdAdd } from "react-icons/io";
-import Loader from "../loader";
+import Loader from "../Loader";
 import { UserContext } from "../../context/UserContext";
 import { useEffect } from "react";
 
