@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MdAddShoppingCart } from "react-icons/md";
 import "./ProductCard.css";
 import ProductPage from "../ProductPage/ProductPage";
-import useAddToCart from "../../hooks/addproduct";
+import useAddToCart from "../../hooks/Addproduct";
 function ProductCard({ product }) {  
   const [ShowProduct, setShowProduct] = useState(false);
   const {addToCart} = useAddToCart( product?._id)

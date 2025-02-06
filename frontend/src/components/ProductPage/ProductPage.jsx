@@ -1,7 +1,6 @@
 import React from "react";
 import { IoMdCloseCircleOutline } from "react-icons/io";
-import useAddToCart from "../../hooks/addproduct";
-
+import useAddToCart from "../../hooks/Addproduct"
 function ProductPage({ product, cancel }) {
     const {addToCart} = useAddToCart( product?._id)
   return (
