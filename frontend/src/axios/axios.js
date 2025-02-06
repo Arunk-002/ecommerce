@@ -7,6 +7,5 @@ const axiosInstance = axios.create({
   },
   withCredentials:true
 });
-// "https://ecommerce-64rm.onrender.com"
 
 export default axiosInstance;

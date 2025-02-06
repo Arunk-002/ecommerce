@@ -20,11 +20,9 @@ app.use(session({
 }));
 
 app.use(cors({
-    origin: 'http://localhost:5173', 
+    origin: 'https://ecommerce-1-fl12.onrender.com', 
     credentials: true,               
   }));
-  // ||'https://ecommerce-git-master-arunk-002s-projects.vercel.app/'
-  
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 
