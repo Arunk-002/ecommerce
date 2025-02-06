@@ -20,7 +20,7 @@ function LandingPage() {
           <div className="container flex justify-end">
             <img
               className="image-landing h-full"
-              src="public/product.png"
+              src="/product.png"
               alt=""
             />
           </div>
