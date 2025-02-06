@@ -3,9 +3,7 @@ import { MdAddShoppingCart } from "react-icons/md";
 import "./ProductCard.css";
 import ProductPage from "../ProductPage/ProductPage";
 import useAddToCart from "../../hooks/addproduct";
-function ProductCard({ product }) {
-  console.log('adfadfa');
-  
+function ProductCard({ product }) {  
   const [ShowProduct, setShowProduct] = useState(false);
   const {addToCart} = useAddToCart( product?._id)
   
