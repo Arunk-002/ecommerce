@@ -4,7 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FiPhone } from "react-icons/fi";
 
 
-export function Footer() {
+export default function Footer() {
   return (
     <>
       <div className="flex bg-[#F5EBDA] flex-col p-5 gap-y-28 bg-[url('/landing-bg.png')] bg-repeat-x bg-[center_top_4rem] bg-contain mt-3">
