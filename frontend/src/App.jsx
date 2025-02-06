@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Login from "./components/login&signup/Login";
-import SignUp from "./components/login&signup/SignUp";
+import Login from "./components/loginAndsignup/Login";
+import SignUp from "./components/loginAndsignup/SignUp";
 import AdminPage from "./components/admin/AdminPage";
 import { Toaster } from "react-hot-toast";
 import { UserProvider } from "./context/UserContext";
