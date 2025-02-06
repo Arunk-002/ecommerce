@@ -4,7 +4,7 @@ import axiosInstance from "../../axios/axios";
 import { toast } from "react-hot-toast";
 import { addProductData } from "../../redux/slice/productSlice";
 import { useDispatch } from "react-redux";
-import Loader from "../loader";
+import Loader from "../Loader";
 const AddProduct = ({ cancel, updateProducts }) => {
   const [productData, setProductData] = useState({
     name: "",
