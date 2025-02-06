@@ -9,7 +9,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import WineHome from "./components/WineHome";
 import Shop from "./components/Shop";
 import Navbar from "./components/navbar/Navbar";
-import UserPage from "./components/userPage/userPage";
+import UserPage from "./components/userPage/UserPage";
 import AdminProducts from "./components/admin/AdminProduct";
 import AdminOrders from "./components/admin/AdminOrders";
 import AdminLayout from "./components/admin/AdminLayout";
