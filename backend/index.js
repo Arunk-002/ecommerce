@@ -20,7 +20,7 @@ app.use(session({
 }));
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Frontend URL
+    origin: 'https://ecommerce-git-master-arunk-002s-projects.vercel.app/', // Frontend URL
     credentials: true,               // Allow cookies to be sent
   }));
   
