@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import OtpModal from "../modal/OtpModal";
 
-export default function SignUp() {
+ function SignUp() {
   const navigate = useNavigate();
   const [isverified,setisverified]=useState(false)
   const[UserData,setUserData]=useState()
@@ -154,3 +154,5 @@ export default function SignUp() {
     </>
   );
 }
+
+export default SignUp

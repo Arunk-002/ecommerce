@@ -3,7 +3,7 @@ import axiosInstance from '../../axios/axios';
 import {useNavigate,Link} from 'react-router-dom'
 import { UserContext } from '../../context/UserContext';
 import toast from 'react-hot-toast';  
-export default function Login() {
+ function Login() {
   const navigate = useNavigate()
   const { login } = useContext(UserContext) 
 
@@ -101,3 +101,5 @@ export default function Login() {
       </>
     )
   }
+
+  export default Login
