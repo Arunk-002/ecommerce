@@ -12,7 +12,7 @@ import AdminProducts from "./components/admin/AdminProduct";
 import AdminOrders from "./components/admin/AdminOrders";
 import AdminLayout from "./components/admin/AdminLayout";
 import Login from "./components/authPages/Login";
-import SignUp from "./components/authPages/SignUp";
+import SignUp from "./components/authPages/Signup";
 
 const App = () => {
   return (
