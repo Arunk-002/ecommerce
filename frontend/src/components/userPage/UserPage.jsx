@@ -4,7 +4,7 @@ import axiosInstance from "../../axios/axios";
 import { MdPlace } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDelete } from "react-icons/md";
-import EditUser from "./editUser";
+import EditUser from "./EditUser";
 import OtpModal from "../modal/OtpModal";
 
 const UserForm = () => {
