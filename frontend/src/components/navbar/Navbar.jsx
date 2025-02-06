@@ -35,7 +35,7 @@ export default function Navbar() {
           <div className="justify-start">
             <img
               alt="VinoRoge"
-              src="/logo.png"
+              src="/Logo.png"
               className="h-auto w-[70%] logo-image"
             />
           </div>

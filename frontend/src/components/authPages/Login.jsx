@@ -34,7 +34,7 @@ import toast from 'react-hot-toast';
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <img
               alt="Your Company"
-              src="public/logo-symbol.png"
+              src="/logo-symbol.png"
               className="mx-auto h-20 w-auto"
             />
             <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">

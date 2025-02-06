@@ -58,7 +58,7 @@ import OtpModal from "../modal/OtpModal";
           <img
             width="100"
             height="100"
-            src="public/logo-symbol.png"
+            src="/logo-symbol.png"
             alt="import"
           />
           <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
