@@ -1,0 +1,33 @@
+
+
+
+.bg-class{
+    background-color: #F5EBDA ;
+}
+
+
+
+.nav-elem-clr{
+    color: var(--text-clr);
+}
+
+h1{
+    color: var(--text-clr);
+}
+h3{
+    color: #AF6900;
+}
+
+.elem-hover{
+    border-bottom:2px solid var(--text-clr);
+}
+.nav-elem{
+    border-bottom:2px solid transparent;
+}
+.nav-elem:hover{
+    border-bottom:2px solid var(--text-clr);
+}
+
+.landing-p{
+    color: var(--text-clr);
+}

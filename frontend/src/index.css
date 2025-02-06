@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --text-clr: #623D2A;
+  --bg-clr: #F5EBDA;
+  }
+
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+   /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+  }
+}
+body{
+  font-family: "Cinzel Decorative", serif;
+  background-color: #F5EBDA ;
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slide-in 0.7s ease-in-out;
+  }
+  
+
+.nav-elem-clr{
+    color: var(--text-clr);
+}
+
+h1{
+    color: var(--text-clr);
+}
+h3{
+    color: #AF6900;
+}
+
+body{
+    font-family: "Bodoni Moda", serif;
+}
+.elem-hover{
+    border-bottom:2px solid var(--text-clr);
+}
+.nav-elem:hover{
+    border-bottom:2px solid var(--text-clr);
+}
+
+.landing-p{
+    color: var(--text-clr);
+}
+
+
+.bg-class{
+  background-color: #F5EBDA ;
+  background-image: url("public/landing-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+
+.image-landing{
+  max-width: 90%;
+  height: auto;
+}
+
+
+.shop-bg{
+  background-image: url("public/texture-bg.png");
+}
+
+.form-bg{
+  background-image: url("public/texture-bg.png");
+}

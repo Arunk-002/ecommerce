@@ -1,0 +1,12 @@
+.bg-class{
+    background-color: #F5EBDA ;
+    background-image: url("public/landing-bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
+.image-landing{
+    max-width: 90%;
+    height: auto;
+}
