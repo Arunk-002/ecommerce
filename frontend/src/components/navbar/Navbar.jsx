@@ -6,7 +6,7 @@ import { UserContext } from "../../context/UserContext";
 import { FaRegUserCircle, FaCartPlus } from "react-icons/fa";
 
 import Cart from "../cartPage/Cart";
-import { Footer } from "../footer/footer";
+import Footer  from "../footer/Footer";
 import OrderPage from "../OrderPage/OrderPage";
 export default function Navbar() {
   const { user, logout } = useContext(UserContext);
