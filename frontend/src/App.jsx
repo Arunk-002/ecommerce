@@ -11,8 +11,8 @@ import UserPage from "./components/userPage/UserPage";
 import AdminProducts from "./components/admin/AdminProduct";
 import AdminOrders from "./components/admin/AdminOrders";
 import AdminLayout from "./components/admin/AdminLayout";
-import Login from "./components/logandsign/Login";
-import SignUp from "./components/logandsign/SignUp";
+import Login from "./components/authPages/Login";
+import SignUp from "./components/authPages/SignUp";
 
 const App = () => {
   return (
