@@ -66,7 +66,6 @@ async function userLogin(req, res) {
           secure: true, // Required for HTTPS
           sameSite: "none", // Required for cross-site cookies
           maxAge: 24 * 60 * 60 * 1000, // 24 hours
-          domain: ".onrender.com", // This allows the cookie to be shared across subdomains
         })
         .json(msg);
     } else {
@@ -86,8 +85,7 @@ function logout(req, res) {
       httpOnly: true,
       secure: true,
       sameSite: 'none',
-      maxAge: 0,
-      domain: '.onrender.com'
+      maxAge: 0
   });
   res.status(201).json({ message: 'Logged out successfully' });
   } catch (error) {
