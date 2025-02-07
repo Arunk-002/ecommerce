@@ -20,9 +20,12 @@ app.use(session({
 }));
 
 app.use(cors({
-    origin: 'https://ecommerce-1-fl12.onrender.com', 
-    credentials: true,               
-  }));
+  origin: ['https://ecommerce-1-fl12.onrender.com'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 

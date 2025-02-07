@@ -62,8 +62,11 @@ async function userLogin(req, res) {
       return res
         .status(201)
         .cookie("idToken", token, {
-          sameSite: "None", // Correct way to set SameSite to 'None'
-          secure: true, // Cookie must be secure if SameSite is 'None'
+          httpOnly: true,
+          secure: true, // Required for HTTPS
+          sameSite: "none", // Required for cross-site cookies
+          maxAge: 24 * 60 * 60 * 1000, // 24 hours
+          domain: ".onrender.com", // This allows the cookie to be shared across subdomains
         })
         .json(msg);
     } else {
@@ -79,10 +82,17 @@ async function userLogin(req, res) {
 
 function logout(req, res) {
   try {
-    res.clearCookie("idToken");
-    res.status(201).json({ message: "user logout succesfully" });
+    res.cookie('idToken', '', {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'none',
+      maxAge: 0,
+      domain: '.onrender.com'
+  });
+  res.status(201).json({ message: 'Logged out successfully' });
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    console.log(error);
+    
   }
 }
 
@@ -121,7 +131,7 @@ function VerifyOtp(req, res) {
 const sendEmail = async (req, res) => {
   const { to } = req.body;
   console.log(to);
-  
+
   const otp = generateOTP();
   req.session.otp = otp;
   req.session.otpExpiry = Date.now() + 2 * 60 * 1000;
@@ -150,13 +160,14 @@ function generateOTP() {
   return OTP;
 }
 
-
 async function emailValidator(req, res) {
   const { email } = req.body;
   try {
     const api_key = process.env.EMAIL_VALIDATOR_KEY;
     if (!api_key) {
-      return res.status(500).json({ success: false, message: "API key is missing." });
+      return res
+        .status(500)
+        .json({ success: false, message: "API key is missing." });
     }
 
     // Await Axios Request
@@ -189,7 +200,6 @@ async function emailValidator(req, res) {
 }
 
 module.exports = emailValidator;
-
 
 module.exports = {
   userCreation,
