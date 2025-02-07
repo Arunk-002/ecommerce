@@ -12,7 +12,7 @@ export const UserProvider = ({ children }) => {
 
     const login = (userData) => {
         setUser(userData);
-        localStorage.setItem('user',userData);
+        localStorage.setItem('user', JSON.stringify(userData));
     };
 
     const logout = async () => {
@@ -24,17 +24,19 @@ export const UserProvider = ({ children }) => {
             }
         } catch (error) {
             console.error('Logout failed:', error);
-
+            // Still clear local data even if server request fails
             setUser(null);
             localStorage.removeItem('user');
         }
     };
 
+    // Verify token by making a request to any protected route
     const verifyUserSession = async () => {
         try {
             const savedUser = localStorage.getItem('user');
             if (savedUser) {
-                const userId = savedUser._id;
+                // Make a request to any protected route, e.g., get user profile
+                const userId = JSON.parse(savedUser)._id; // or however you store the user ID
                 await axiosInstance.get(`/getUser/${userId}`);
                 setUser(JSON.parse(savedUser));
             }
